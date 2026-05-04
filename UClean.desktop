@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=UClean
+GenericName=System Cleaner
+Comment=Bersihkan Ubuntu dengan satu klik
+Exec=python3 /home/grizenzio/UClean/uclean.py
+Icon=system-software-install
+Terminal=false
+Type=Application
+Categories=System;Utility;
+Keywords=clean;cleaner;junk;sampah;ubuntu;apt;
+StartupNotify=true

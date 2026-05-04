@@ -1,0 +1,9 @@
+# Git
+__pycache__/
+*.pyc
+*.pyo
+
+# Build artifacts (deb-build folder)
+deb-build/
+
+# Keep dist/ .deb in repo
