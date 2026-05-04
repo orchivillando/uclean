@@ -24,6 +24,8 @@ Aplikasi GUI sederhana untuk membersihkan sampah sistem Ubuntu **dengan satu kli
 ## 📸 Screenshot
 
 > GTK3 native UI — tampil seperti aplikasi Ubuntu asli.
+> <img width="565" height="578" alt="Screenshot From 2026-05-04 15-25-36" src="https://github.com/user-attachments/assets/61ee8633-e4e8-48d8-92c7-ba8e4305e6ab" />
+
 
 ---
 
