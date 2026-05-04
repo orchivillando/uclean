@@ -90,4 +90,4 @@ Operasi yang membutuhkan `sudo` (apt, snap, journalctl) menggunakan **pkexec** (
 
 ## 📄 Lisensi
 
-MIT License © 2025 [Grizenzio Orchivillando](https://github.com/orchivillando)
+MIT License © 2026 [Grizenzio Orchivillando](https://github.com/orchivillando)
