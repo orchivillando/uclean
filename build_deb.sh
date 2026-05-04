@@ -9,6 +9,10 @@ DIST_DIR="dist"
 
 echo "🔨 Building UClean v${VERSION} .deb..."
 
+# Render icons from SVG first
+echo "🎨 Rendering icons..."
+python3 render_icons.py
+
 # Clean previous build
 rm -rf "${BUILD_DIR}"
 
@@ -18,10 +22,20 @@ mkdir -p "${BUILD_DIR}/usr/bin"
 mkdir -p "${BUILD_DIR}/usr/share/uclean"
 mkdir -p "${BUILD_DIR}/usr/share/applications"
 mkdir -p "${BUILD_DIR}/usr/share/doc/uclean"
+mkdir -p "${BUILD_DIR}/usr/share/icons/hicolor/scalable/apps"
+for size in 16 22 24 32 48 64 128 256; do
+  mkdir -p "${BUILD_DIR}/usr/share/icons/hicolor/${size}x${size}/apps"
+done
 mkdir -p "${DIST_DIR}"
 
 # Copy files
-cp uclean.py "${BUILD_DIR}/usr/share/uclean/uclean.py"
+cp uclean.py    "${BUILD_DIR}/usr/share/uclean/uclean.py"
+cp uclean.svg   "${BUILD_DIR}/usr/share/icons/hicolor/scalable/apps/uclean.svg"
+
+for size in 16 22 24 32 48 64 128 256; do
+  cp "icons/${size}x${size}/apps/uclean.png" \
+     "${BUILD_DIR}/usr/share/icons/hicolor/${size}x${size}/apps/uclean.png"
+done
 
 # Launcher script
 cat > "${BUILD_DIR}/usr/bin/uclean" << 'EOF'
@@ -36,7 +50,7 @@ Name=UClean
 GenericName=System Cleaner
 Comment=Bersihkan Ubuntu dengan satu klik
 Exec=uclean
-Icon=system-software-install
+Icon=uclean
 Terminal=false
 Type=Application
 Categories=System;Utility;
@@ -70,6 +84,7 @@ if [ -d "/home/$SUDO_USER/Desktop" ]; then
     chown "$SUDO_USER:$SUDO_USER" "/home/$SUDO_USER/Desktop/uclean.desktop" 2>/dev/null || true
 fi
 update-desktop-database /usr/share/applications/ 2>/dev/null || true
+gtk-update-icon-cache -f -t /usr/share/icons/hicolor/ 2>/dev/null || true
 EOF
 
 # DEBIAN/prerm

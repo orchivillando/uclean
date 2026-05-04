@@ -3,7 +3,11 @@ __pycache__/
 *.pyc
 *.pyo
 
-# Build artifacts (deb-build folder)
+# Build artifacts
 deb-build/
+icons/
 
-# Keep dist/ .deb in repo
+# Keep these in repo
+# dist/*.deb
+# uclean.svg
+# uclean.png

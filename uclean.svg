@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF7043;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BF360C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="broomGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#00000033"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="8" y="8" width="240" height="240" rx="52" ry="52"
+        fill="url(#bgGrad)" filter="url(#shadow)"/>
+
+  <!-- Inner subtle highlight -->
+  <rect x="8" y="8" width="240" height="120" rx="52" ry="52"
+        fill="white" opacity="0.08"/>
+
+  <!-- Broom handle -->
+  <line x1="170" y1="62" x2="95" y2="175"
+        stroke="url(#broomGrad)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Broom head body -->
+  <ellipse cx="82" cy="190" rx="38" ry="18"
+           fill="url(#broomGrad)" transform="rotate(-28, 82, 190)"/>
+
+  <!-- Broom bristles -->
+  <line x1="56" y1="195" x2="48" y2="218"
+        stroke="#FFE0B2" stroke-width="5" stroke-linecap="round"/>
+  <line x1="68" y1="201" x2="63" y2="224"
+        stroke="#FFE0B2" stroke-width="5" stroke-linecap="round"/>
+  <line x1="80" y1="204" x2="78" y2="228"
+        stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <line x1="92" y1="203" x2="93" y2="227"
+        stroke="#FFE0B2" stroke-width="5" stroke-linecap="round"/>
+  <line x1="103" y1="199" x2="107" y2="222"
+        stroke="#FFE0B2" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Dust particles / sparkles -->
+  <!-- Sparkle 1 -->
+  <g transform="translate(148, 108)">
+    <circle cx="0" cy="0" r="5" fill="white" opacity="0.9"/>
+    <line x1="0" y1="-10" x2="0" y2="10" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="-10" y1="0" x2="10" y2="0" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="-7" y1="-7" x2="7" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="7" y1="-7" x2="-7" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- Sparkle 2 (small) -->
+  <g transform="translate(50, 80)">
+    <circle cx="0" cy="0" r="3.5" fill="white" opacity="0.8"/>
+    <line x1="0" y1="-8" x2="0" y2="8" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <line x1="-8" y1="0" x2="8" y2="0" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Sparkle 3 (tiny) -->
+  <g transform="translate(185, 155)">
+    <circle cx="0" cy="0" r="3" fill="white" opacity="0.7"/>
+    <line x1="0" y1="-7" x2="0" y2="7" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <line x1="-7" y1="0" x2="7" y2="0" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- Dust dots near bristles -->
+  <circle cx="40" cy="230" r="4" fill="white" opacity="0.4"/>
+  <circle cx="120" cy="228" r="3" fill="white" opacity="0.35"/>
+  <circle cx="130" cy="218" r="2" fill="white" opacity="0.3"/>
+</svg>
