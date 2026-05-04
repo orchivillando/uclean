@@ -64,7 +64,7 @@ Package: uclean
 Version: ${VERSION}
 Architecture: all
 Maintainer: Grizenzio Orchivillando <orchivillando@users.noreply.github.com>
-Depends: python3, python3-gi, gir1.2-gtk-3.0, policykit-1
+Depends: python3, python3-gi, gir1.2-gtk-3.0, polkitd | policykit-1
 Section: utils
 Priority: optional
 Homepage: https://github.com/orchivillando/uclean
